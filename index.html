@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unicorn — Smart School Wear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+  <!-- STEP 2 & 9: Navigation Header + Mobile Burger Button -->
+  <header class="navbar">
+    <div class="logo">UNICORN</div>
+    <button id="burgerBtn" class="burger-btn" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="navLinks" class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#action">Take Action</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <!-- STEP 3: Fact Banner with Real External Links -->
+  <div class="fact-banner">
+    <strong>Did you know?</strong> Strict school uniforms can increase daily stress and create unnecessary fast-fashion waste. 
+    (Sources: 
+    <a href="https://www.cam.ac.uk" target="_blank" rel="noopener noreferrer">University of Cambridge</a> &amp; 
+    <a href="https://journalistsresource.org" target="_blank" rel="noopener noreferrer">Harvard Journalist's Resource</a>)
+  </div>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Smart &amp; Free School Wear</h1>
+      <p class="hero-subtitle">
+        Express your personality comfortably at school while reducing textile waste. 
+        Check what is allowed or propose new styles for our dress code.
+      </p>
+      <a href="#action" class="btn-primary">Propose New Clothes</a>
+    </section>
+
+    <!-- STEP 4: 3-Step Action Guide Cards -->
+    <section class="steps-section">
+      <h2>How Unicorn Works</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h3>Check Rules</h3>
+          <p>Browse our approved catalog to see which hoodies, tops, and accessories are safe to wear.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <h3>Pick Your Fit</h3>
+          <p>Wear comfortable, sustainable everyday clothes from your own wardrobe instead of buying extra uniforms.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <h3>Propose Items</h3>
+          <p>Want a new style allowed? Submit an anonymous suggestion and vote with other students.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 5 & 6: Catalog Section & Category Filters -->
+    <section id="catalog" class="catalog-section">
+      <h2>Approved School Wear Catalog</h2>
+      <p class="section-subtitle">Click any item to check dress-code rules and sustainability tips.</p>
+
+      <div class="filter-buttons">
+        <button id="allFilterBtn" class="filter-btn active" data-filter="all">All (10)</button>
+        <button class="filter-btn" data-filter="hoodies">Hoodies</button>
+        <button class="filter-btn" data-filter="tops">Tops</button>
+        <button class="filter-btn" data-filter="pants">Pants</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+      </div>
+
+      <div id="catalogGrid" class="catalog-grid">
+        <!-- 1 -->
+        <div class="catalog-card" data-category="hoodies"
+             data-title="Black Oversized Hoodie"
+             data-rule="Allowed: Plain solid colors without large logos or offensive graphics."
+             data-eco="Eco Tip: A heavy cotton hoodie lasts 3+ years and replaces synthetic uniform sweaters.">
+          <img src="images/hoodie-black.jpg" alt="Black school approved oversized hoodie"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Black+Hoodie'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Black Oversized Hoodie</h3>
+            <p class="card-cat">Hoodies</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="catalog-card" data-category="hoodies"
+             data-title="Grey Zip-Up Hoodie"
+             data-rule="Allowed: Clean zip-up hoodies worn over a plain t-shirt or polo."
+             data-eco="Eco Tip: Layering zip-up hoodies helps you adapt to classroom temperature without buying extra coats.">
+          <img src="images/hoodie-grey.jpg" alt="Grey school approved zip-up hoodie"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Grey+Zip+Hoodie'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Grey Zip-Up Hoodie</h3>
+            <p class="card-cat">Hoodies</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="catalog-card" data-category="hoodies"
+             data-title="Navy Crewneck Sweatshirt"
+             data-rule="Allowed: Neat crewneck sweatshirts in dark or neutral shades."
+             data-eco="Eco Tip: Wear 30+ times across school and weekends to cut clothing waste.">
+          <img src="images/sweatshirt-navy.jpg" alt="Navy blue school approved crewneck sweatshirt"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Navy+Sweatshirt'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Navy Crewneck Sweatshirt</h3>
+            <p class="card-cat">Hoodies</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="catalog-card" data-category="tops"
+             data-title="White Classic Polo Shirt"
+             data-rule="Allowed: Collared polo shirts in white, navy, black, or pastel tones."
+             data-eco="Eco Tip: Wash in cold water to keep cotton collars crisp and save energy.">
+          <img src="images/polo-white.jpg" alt="White school approved classic polo shirt"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=White+Polo'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>White Classic Polo Shirt</h3>
+            <p class="card-cat">Tops</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="catalog-card" data-category="tops"
+             data-title="Beige Knitted Cardigan"
+             data-rule="Allowed: Button-up cardigans worn over neat tops or shirts."
+             data-eco="Eco Tip: Natural knitwear lasts for years and reduces microplastic shedding.">
+          <img src="images/cardigan-beige.jpg" alt="Beige school approved knitted cardigan"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Beige+Cardigan'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Beige Knitted Cardigan</h3>
+            <p class="card-cat">Tops</p>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="catalog-card" data-category="tops"
+             data-title="Light Blue Oxford Shirt"
+             data-rule="Allowed: Relaxed button-down shirts, tucked or untucked neatly."
+             data-eco="Eco Tip: Works for both school presentations and casual outings—one shirt instead of two.">
+          <img src="images/shirt-blue.jpg" alt="Light blue school approved Oxford shirt"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Oxford+Shirt'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Light Blue Oxford Shirt</h3>
+            <p class="card-cat">Tops</p>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="catalog-card" data-category="pants"
+             data-title="Relaxed Fit Chinos"
+             data-rule="Allowed: Straight or relaxed chinos in khaki, black, or navy."
+             data-eco="Eco Tip: Durable cotton twill resists tearing better than thin formal uniform trousers.">
+          <img src="images/chinos-khaki.jpg" alt="Khaki school approved relaxed chinos"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Relaxed+Chinos'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Relaxed Fit Chinos</h3>
+            <p class="card-cat">Pants</p>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="catalog-card" data-category="pants"
+             data-title="Dark Straight Jeans"
+             data-rule="Allowed: Clean dark blue or black jeans without rips or holes."
+             data-eco="Eco Tip: Jeans require minimal washing and last through multiple school grades.">
+          <img src="images/jeans-dark.jpg" alt="Dark blue school approved straight jeans"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Straight+Jeans'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Dark Straight Jeans</h3>
+            <p class="card-cat">Pants</p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="catalog-card" data-category="accessories"
+             data-title="Minimalist Silver Studs"
+             data-rule="Allowed: Small stud earrings or simple hoops that are safe for PE and labs."
+             data-eco="Eco Tip: Choose stainless steel or silver jewelry that never rusts or gets thrown away.">
+          <img src="images/earrings-studs.jpg" alt="Minimalist silver stud earrings"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Silver+Studs'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Minimalist Silver Studs</h3>
+            <p class="card-cat">Accessories</p>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="catalog-card" data-category="accessories"
+             data-title="Classic Wristwatch"
+             data-rule="Allowed: Analog or digital wristwatches to help manage class time without phones."
+             data-eco="Eco Tip: A timeless accessory that adds personal style to any outfit.">
+          <img src="images/watch-classic.jpg" alt="Classic minimalist wristwatch"
+               onerror="this.src='https://placehold.co/400x300/e8f5e9/1b4332?text=Wristwatch'">
+          <div class="card-body">
+            <span class="badge-approved">School Approved</span>
+            <h3>Classic Wristwatch</h3>
+            <p class="card-cat">Accessories</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 8 (UPGRADED): Take Action Form, Moderation Queue & Voting -->
+    <section id="action" class="action-section">
+      <h2>Propose a New Clothing Item</h2>
+      <p class="section-subtitle">All suggestions go through auto-check and admin moderation before public voting.</p>
+
+      <form id="proposalForm" class="proposal-form" novalidate>
+        <div class="form-group">
+          <label for="studentName">Your Name (Optional)</label>
+          <input type="text" id="studentName" placeholder="Anonymous">
+        </div>
+
+        <div class="form-group">
+          <label for="itemName">Clothing Item Name *</label>
+          <input type="text" id="itemName" placeholder="e.g. Black Oversized Hoodie or Cargo Pants" required>
+        </div>
+
+        <div class="form-group">
+          <label for="itemCategory">Category</label>
+          <select id="itemCategory">
+            <option value="Hoodies">Hoodies</option>
+            <option value="Tops">Tops</option>
+            <option value="Pants">Pants</option>
+            <option value="Accessories">Accessories</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="itemReason">Why should this be allowed? *</label>
+          <textarea id="itemReason" rows="3" placeholder="Explain comfort, school appropriateness, or sustainability (min 10 characters)..." required></textarea>
+        </div>
+
+        <p id="formError" class="form-error" role="alert"></p>
+        <p id="formSuccess" class="form-success" role="status"></p>
+
+        <button type="submit" class="btn-primary btn-full">Submit for Review</button>
+      </form>
+
+      <!-- СКРЫТАЯ АДМИН-ПАНЕЛЬ -->
+      <div id="adminPanel" class="admin-panel" style="display: none;">
+        <div class="admin-header">
+          <h3>&#128274; Admin Moderation Queue (<span id="pendingCount">0</span> pending)</h3>
+          <button id="logoutAdminBtn" class="btn-small">Close Admin</button>
+        </div>
+        <div id="pendingList" class="proposals-list"></div>
+      </div>
+
+      <!-- ПУБЛИЧНЫЙ СПИСОК -->
+      <div class="proposals-board">
+        <h3>Approved Student Proposals (1 Vote per Item)</h3>
+        <div id="proposalsList" class="proposals-list"></div>
+      </div>
+    </section>
+
+    <!-- Research Sources Section -->
+    <section id="sources" class="sources-section">
+      <h2>Research &amp; Evidence Sources</h2>
+      <div class="sources-grid">
+        <a href="https://www.cam.ac.uk" target="_blank" rel="noopener noreferrer" class="source-card">
+          <h3>University of Cambridge</h3>
+          <p>Research on school uniform policies, student comfort, and daily physical activity levels.</p>
+          <span>Visit Website &rarr;</span>
+        </a>
+        <a href="https://journalistsresource.org" target="_blank" rel="noopener noreferrer" class="source-card">
+          <h3>Harvard Journalist's Resource</h3>
+          <p>Review of academic studies on school dress codes, student self-expression, and discipline.</p>
+          <span>Visit Website &rarr;</span>
+        </a>
+        <a href="https://www.ellenmacarthurfoundation.org" target="_blank" rel="noopener noreferrer" class="source-card">
+          <h3>Ellen MacArthur Foundation</h3>
+          <p>Data on fast-fashion textile waste and why rewearing everyday clothes helps the environment.</p>
+          <span>Visit Website &rarr;</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Unicorn — Grade 9 MYP Design Project | Smart &amp; Sustainable School Dress Code</p>
+    <button id="adminLoginBtn" class="admin-link-btn">Admin Moderation Login</button>
+  </footer>
+
+  <!-- STEP 7: Clothing Detail Popup Modal -->
+  <div id="itemModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close" aria-label="Close modal">&times;</button>
+      <span class="badge-approved">School Approved</span>
+      <h3 id="modalTitle">Item Title</h3>
+      <p id="modalRule" class="modal-rule"></p>
+      <div class="modal-eco-box">
+        <p id="modalEco"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=2"></script>
+</body>
+</html>
